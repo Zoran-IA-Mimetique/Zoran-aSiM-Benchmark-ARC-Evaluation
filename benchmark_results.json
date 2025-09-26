@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "question": "ARC style Q1",
+    "baseline_answer": "Réponse partielle",
+    "zoran_answer": "Réponse complète et exacte",
+    "baseline_score": 0.6,
+    "zoran_score": 0.95
+  },
+  {
+    "id": 2,
+    "question": "ARC style Q2",
+    "baseline_answer": "Erreur factuelle",
+    "zoran_answer": "Réponse exacte, explications détaillées",
+    "baseline_score": 0.3,
+    "zoran_score": 0.93
+  },
+  {
+    "id": 3,
+    "question": "ARC style Q3",
+    "baseline_answer": "Réponse vague",
+    "zoran_answer": "Réponse claire + structure pédagogique",
+    "baseline_score": 0.5,
+    "zoran_score": 0.9
+  }
+]
