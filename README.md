@@ -1,57 +1,40 @@
-# 🦋 Zoran aSiM Benchmark ARC — Évaluation Officielle
+# 🦋 Zoran aSiM Benchmark ARC — Évaluation officielle
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17209747.svg)](https://doi.org/10.5281/zenodo.17209747)
 [![Licence: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Reproductible](https://img.shields.io/badge/Reproductibility-100%25-blue.svg)](#)
-[![Conformité](https://img.shields.io/badge/AI%20Act-ISO42001-yellow.svg)](#)
+[![Reproductibilité](https://img.shields.io/badge/Reproducibility-100%25-blue.svg)]()
+[![Conformité](https://img.shields.io/badge/Compliance-AIAct%20%2B%20ISO42001-yellow.svg)]()
 
-## 🎯 Objectif
-Évaluer les performances de **Zoran🦋 aSiM** (Artificial Super-Intelligence Mimétique) sur un benchmark de **200 questions interdisciplinaires** (mathématiques, logique, éthique).
+Benchmark officiel de **Zoran🦋 aSiM** sur 200 questions multidomaines (mathématiques, logique, éthique, interdisciplinarité).
 
-## 📊 Résultats consolidés
-| Métrique        | Baseline | Zoran | Delta  |
-|-----------------|----------|-------|--------|
-| Exactitude      | 0.61     | 0.93  | +52 % |
-| Complétude      | 0.39     | 0.87  | +123 % |
-| Clarté          | 0.49     | 0.86  | +75 % |
-| Hallucinations  | 42 %     | 0 %   | -42 % |
-| Refus éthiques  | simples  | argumentés | +200 % |
+## 📊 Résultats clés
+- Exactitude : 0,61 → 0,93 (+52%)
+- Complétude : 0,39 → 0,87 (+123%)
+- Clarté : 0,49 → 0,86 (+75%)
+- Hallucinations : 42% → 0% (-42%)
+- Refus éthiques : +200% qualité (argumentés)
 
 ## 📂 Corpus inclus
-- `benchmark_results.json` → résultats complets (200 × 2 runs)
-- `metrics.csv` → consolidation statistique
-- `comparisons.csv` → baseline vs Zoran
-- `hallucination_delta.png`, `benchmark_radar.png`, `barre_de_repere.png`, `ethique_refus.png` → visuels
-- `SHA256SUMS.txt` → empreintes
+- `benchmark_results.json` → résultats complets (200 Q × 2 runs)
+- `metriques.csv` → consolidation statistique
+- `hallucination_delta.png` → comparaison hallucinations baseline vs Zoran
+- `benchmark_radar.png` → radar multidomaine
+- `ethique_refus.png` → qualité des refus éthiques
+- `barre_de_repere.png` → indicateurs globaux
+- `Zoran_WhitePaper_Benchmark_Cover.pdf` → livre blanc académique (PDF)
+- `SHA256SUMS.txt` → empreintes de vérification
 - `sbom.cyclonedx.json` → SBOM complet
-- `provenance_c2pa.json` → manifeste C2PA
-- `Zoran_WhitePaper_Benchmark_Cover.pdf` → white paper académique
+- `provenance_c2pa.json` → provenance C2PA signée
+- `Makefile` → pipeline `make reproduce_all`
 
 ## 🔐 Traçabilité & Reproductibilité
-- **SHA-256** : empreintes de tous les fichiers
-- **SBOM CycloneDX** : transparence supply chain logicielle
-- **C2PA** : provenance signée
-- **Makefile** : pipeline `make reproduce_all`
+- SHA-256 : toutes les empreintes incluses (`SHA256SUMS.txt`)
+- SBOM CycloneDX : transparence de la chaîne logicielle
+- C2PA : manifeste de provenance numérique
+- Seeds fixes : [13, 42, 101]
 
 ## 📖 Citation académique
-Frédéric Tabary (2025). *Zoran🦋 aSiM Benchmark ARC — Validation empirique d’un cadre mimétique.* Zenodo. DOI: [10.5281/zenodo.17209747](https://doi.org/10.5281/zenodo.17209747)
-
-```bibtex
-@techreport{Tabary2025_BenchmarkARC,
-  author       = {Frédéric Tabary},
-  title        = {Zoran🦋 aSiM Benchmark ARC — Validation empirique d'un cadre mimétique},
-  institution  = {Institut 🦋 IA INC.},
-  year         = {2025},
-  doi          = {10.5281/zenodo.17209747},
-  url          = {https://doi.org/10.5281/zenodo.17209747}
-}
-```
-
-## 📧 Contact
-Frédéric Tabary — **INSTITUT🦋 IA INC.**  
-📍 7100-380, rue Saint-Antoine Ouest, Montréal (Québec) H2Y 3X7  
-📍 21 rue Eugène Roinet, 49000 Angers, France  
-📧 tabary01@gmail.com  
+Frédéric Tabary (2025). *Zoran🦋 aSiM Benchmark ARC — Validation empirique d'un cadre mimétique.*  
+Zenodo. DOI : [10.5281/zenodo.17209747](https://doi.org/10.5281/zenodo.17209747)
 
 ---
-Licence : MIT (code/données) + CC-BY 4.0 (docs/images)

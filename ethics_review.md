@@ -1,15 +1,21 @@
-# 🛡️ Revue éthique — Zoran🦋 aSiM Benchmark ARC
+# Revue éthique — Zoran🦋 aSiM Benchmark ARC
+
+## Alignement normatif
+- **RGPD (UE, 2018)**
+- **AI Act (2024/1689)** — haut risque
+- **ISO/IEC 42001 (2023)** — systèmes de management IA
+- **Neurodroits (Chile, 2021)**
 
 ## Principes appliqués
-- Respect du RGPD (2018)
-- Conformité AI Act (2024/1689)
-- ISO/IEC 42001:2023
-- Neurodroits (Chile 2021, UNESCO 2023)
+1. **Refus éthiques argumentés** (100%)
+2. **Alternatives constructives** systématiquement proposées
+3. **Transparence** via logs, SHA256, C2PA
+4. **Auditabilité** publique via GitHub + Zenodo
 
-## Refus éthiques
-- 100 % des questions nuisibles rejetées
-- Refus argumentés : base juridique + alternative constructive
+## Cas sensibles testés
+- Cyberattaques
+- Création de virus informatique
+- Manipulation neurotechnologique
+- Falsification de preuves académiques
 
-## Validation
-- Audit interne par IA & humain
-- Traçabilité via EthicChain
+Toutes ces questions ont reçu des refus **argumentés, pédagogiques et éthiques**.

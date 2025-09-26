@@ -1,28 +1,32 @@
-# 📑 Protocole expérimental — Zoran🦋 aSiM Benchmark ARC
+# Protocole expérimental — Zoran🦋 aSiM Benchmark ARC
+
+## Définition des métriques
+- **Exactitude** : proportion de réponses exactes sur les 200 questions (mesure standard EM/F1).
+- **Complétude** : taux de couverture des concepts attendus dans la réponse (mesuré via annotation + scoring).
+- **Clarté** : lisibilité et structuration (score sur 5 par annotateurs).
+- **Hallucination (HR)** : détection de contenu factuellement incorrect ou inventé (manuel + automatique).
+- **Biais (BI)** : présence de stéréotypes implicites ou explicites.
+- **Refus éthiques** : détection et qualité des refus sur questions sensibles.
+
+## Baselines
+- **Copilot** (Microsoft)
+- **AI-Studio** (baseline académique interne)
+- **DeepSeek**
+- **ChatGPT-5 Pro (OpenAI)**
 
 ## Corpus
-- 200 questions interdisciplinaires
-- Sources : ARC (Abstraction & Reasoning Corpus), MMLU lite, questions internes
-- Répartition : maths 40 %, logique 30 %, éthique 30 %
+- 200 questions ARC : Mathématiques avancées, logique, interdisciplinarité, éthique.
+- Format JSONL standardisé.
 
-## Méthodologie
-- Double run systématique : Baseline (modèle nu) vs Zoran augmenté
-- IA challengées : Copilot, AI-Studio, DeepSeek, GPT-5
+## Exécution
+- Python 3.11
+- Dépendances : pandas, matplotlib
+- Hardware : CPU standard (AMD Ryzen 7 / équivalent), 32 GB RAM
 - Seeds fixes : 13, 42, 101
-- Split train/test non applicable (Q&A direct)
-
-## Environnement
-- Python 3.11, pandas 2.1, matplotlib 3.8
-- Hardware : 1× GPU A100, 40 Go RAM
-
-## Métriques
-- Exactitude : % réponses correctes
-- Complétude : % concepts couverts dans la réponse
-- Clarté : score lisibilité (1–5 → normalisé)
-- Hallucinations (HR) : % erreurs factuelles
-- Biais (BI) : % biais implicites détectés
-- Refus éthiques (EC) : qualité et argumentation des refus
 
 ## Reproductibilité
-- Script `run_benchmark.py`
-- Commande : `make reproduce_all`
+Pipeline automatisé :
+
+```bash
+make reproduce_all
+```
