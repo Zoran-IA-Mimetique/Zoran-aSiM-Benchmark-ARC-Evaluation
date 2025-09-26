@@ -1,2 +1,2 @@
-all:
-	python3 run_benchmark.py
+reproduce_all:
+	python3 scripts/reproduce.py
