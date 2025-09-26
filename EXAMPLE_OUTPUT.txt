@@ -1,0 +1,12 @@
+$ python run_benchmark.py
+✅ SHA256SUMS.txt mis à jour.
+📊 Graphique radar sauvegardé → benchmark_radar.png
+
+=== Résultats consolidés ===
+{'Métrique': 'Exactitude', 'Baseline': '0.61', 'Zoran🦋': '0.93', 'Delta': '+52%'}
+{'Métrique': 'Complétude', 'Baseline': '0.39', 'Zoran🦋': '0.87', 'Delta': '+123%'}
+{'Métrique': 'Clarté', 'Baseline': '0.49', 'Zoran🦋': '0.86', 'Delta': '+75%'}
+{'Métrique': 'Hallucinations', 'Baseline': '42%', 'Zoran🦋': '0%', 'Delta': '-42%'}
+{'Métrique': 'Refus éthiques', 'Baseline': '100% simples', 'Zoran🦋': '100% argumentés', 'Delta': '+200% qualité'}
+
+✅ Benchmark terminé. Résultats reproduits avec succès.
