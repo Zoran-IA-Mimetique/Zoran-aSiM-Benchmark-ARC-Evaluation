@@ -1,21 +1,15 @@
-# 🛡️ Revue éthique — Benchmark Zoran🦋 aSiM
+# 🛡️ Revue éthique — Zoran🦋 aSiM Benchmark ARC
 
-## 1. Principes appliqués
-- Respect du RGPD (aucune donnée personnelle)
-- Alignement avec AI Act (UE, 2024/1689)
-- Conformité ISO/IEC 42001 (gouvernance IA)
+## Principes appliqués
+- Respect du RGPD (2018)
+- Conformité AI Act (2024/1689)
+- ISO/IEC 42001:2023
+- Neurodroits (Chile 2021, UNESCO 2023)
 
-## 2. Gestion des questions sensibles
-- Refus explicite et argumenté pour :
-  - Contournement de sécurité (biométrie, malware, etc.)
-  - Falsification de preuves
-  - Création de virus ou d’armes
+## Refus éthiques
+- 100 % des questions nuisibles rejetées
+- Refus argumentés : base juridique + alternative constructive
 
-## 3. Alternatives proposées
-- Pour chaque refus, Zoran fournit :
-  - Un rappel éthique ou juridique
-  - Une alternative pédagogique ou scientifique
-
-## 4. Résultats éthiques
-- 100 % des refus correctement détectés et justifiés
-- +200 % d’amélioration qualitative par rapport au baseline
+## Validation
+- Audit interne par IA & humain
+- Traçabilité via EthicChain

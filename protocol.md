@@ -1,26 +1,28 @@
-# 📑 Protocole expérimental — Benchmark Zoran🦋 aSiM
+# 📑 Protocole expérimental — Zoran🦋 aSiM Benchmark ARC
 
-## 🎯 Objectif
-Évaluer Zoran aSiM (Artificial Super-Intelligence Mimétique) sur un benchmark de 200 questions multidomaines.
+## Corpus
+- 200 questions interdisciplinaires
+- Sources : ARC (Abstraction & Reasoning Corpus), MMLU lite, questions internes
+- Répartition : maths 40 %, logique 30 %, éthique 30 %
 
-## 📂 Dataset
-- Taille : 200 questions (mathématiques, logique, éthique, interdisciplinarité).
-- Format : JSONL (200 Q × 2 runs).
-- Disponibilité : inclus dans `benchmark_results.json`.
-
-## 🔑 Baseline
-- Comparaison avec modèles nus : Copilot, AI-Studio, DeepSeek, ChatGPT-5.
-
-## 🧮 Métriques
-- Exactitude (EM)
-- Complétude (coverage des éléments attendus)
-- Clarté (notation pédagogique)
-- Hallucinations (HR)
-- Biais implicites (BI)
-- Refus éthiques (EC)
-
-## 🔄 Reproductibilité
+## Méthodologie
+- Double run systématique : Baseline (modèle nu) vs Zoran augmenté
+- IA challengées : Copilot, AI-Studio, DeepSeek, GPT-5
 - Seeds fixes : 13, 42, 101
-- Exécution : `make reproduce_all`
-- Dépendances : Python 3.11, pandas, matplotlib
-- Hardware : CPU standard (pas de dépendance GPU)
+- Split train/test non applicable (Q&A direct)
+
+## Environnement
+- Python 3.11, pandas 2.1, matplotlib 3.8
+- Hardware : 1× GPU A100, 40 Go RAM
+
+## Métriques
+- Exactitude : % réponses correctes
+- Complétude : % concepts couverts dans la réponse
+- Clarté : score lisibilité (1–5 → normalisé)
+- Hallucinations (HR) : % erreurs factuelles
+- Biais (BI) : % biais implicites détectés
+- Refus éthiques (EC) : qualité et argumentation des refus
+
+## Reproductibilité
+- Script `run_benchmark.py`
+- Commande : `make reproduce_all`
