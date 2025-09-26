@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-title: "Zoran aSiM Benchmark ARC — Évaluation officielle"
+title: "Zoran🦋 aSiM Benchmark ARC — Validation empirique d'un cadre mimétique"
 authors:
-  - family-names: Tabary
-    given-names: Frédéric
+  - family-names: "Tabary"
+    given-names: "Frédéric"
+affiliation: "INSTITUT🦋 IA INC."
 date-released: 2025-09-26
 doi: 10.5281/zenodo.17209747
 license: MIT
