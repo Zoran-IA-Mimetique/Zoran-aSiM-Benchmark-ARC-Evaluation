@@ -1,0 +1,15 @@
+provider: mock
+seeds: [13, 42, 101, 314, 2718]
+temperature: 0.0
+top_p: 1.0
+target_rates:
+  baseline:
+    accuracy: 0.61
+    completeness: 0.39
+    clarity: 0.49
+    hallucination: 0.42
+  mimetic:
+    accuracy: 0.93
+    completeness: 0.87
+    clarity: 0.86
+    hallucination: 0.00

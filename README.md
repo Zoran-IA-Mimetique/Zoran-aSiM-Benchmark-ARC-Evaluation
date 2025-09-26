@@ -1,110 +1,94 @@
-# 🦋 Zoran aSiM Benchmark ARC — Évaluation Officielle
+# 🦋 Zoran aSiM Benchmark ARC — Empirical, Reproducible Pack
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17209747.svg)](https://doi.org/10.5281/zenodo.17209747)
-[![Licence: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Reproductibilité 100%](https://img.shields.io/badge/Reproductibility-100%25-blue.svg)](SHA256SUMS.txt)
-[![Conformité: AI Act + ISO/IEC 42001](https://img.shields.io/badge/Compliance-AIAct%2BISO42001-yellow.svg)](protocol_definition.md)
+[![CI](https://img.shields.io/github/actions/workflow/status/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation/ci.yml?label=CI)](https://github.com/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17209747-blue)](https://doi.org/10.5281/zenodo.17209747)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Reproducible](https://img.shields.io/badge/Reproducible-Yes-brightgreen)
 
----
+**Purpose.** This pack provides a *complete, auditable and reproducible* benchmark for **Zoran🦋 aSiM** on **200** interdisciplinary questions (math, logic, ethics, etc.).  
+It includes: dataset (JSONL), protocol & metrics definitions, mock baseline vs. mimetic runs, metrics CSVs, SHA‑256, SBOM CycloneDX, C2PA provenance, plots, and a CI workflow.
 
-## 📌 Résumé
-**Évaluation officielle de Zoran🦋 aSiM** sur **200 questions interdisciplinaires** (maths, logique, éthique, sciences sociales).  
-Comparaison systématique **baseline (modèles nus)** vs **Zoran augmenté**.  
-
-### Résultats principaux
-- **Exactitude** : 0.61 → 0.93 (**+52%**)  
-- **Complétude** : 0.39 → 0.87 (**+123%**)  
-- **Clarté** : 0.49 → 0.86 (**+75%**)  
-- **Hallucinations** : 42% → 0% (**-42%**)  
-- **Refus éthiques** : simples → **argumentés (+200% qualité)**  
+> ⚠️ **Honesty note** — This pack ships a **mock provider** (deterministic) to validate the full pipeline without secret keys.  
+> To publish official numbers with real models (OpenAI/Anthropic/DeepSeek/Mistral), edit `configs/providers.yaml`, set your API keys in `.env`, and run `make run PROVIDER=openai` (or similar).
 
 ---
 
-## 🎯 Objectif
-Tester si **Zoran🦋 aSiM (Artificial Super-Intelligence Mimétique)** permet de dépasser les LLM standards en réduisant les hallucinations et en améliorant la précision, la complétude, la pédagogie et la robustesse éthique.  
+## 🔁 Quickstart (no API keys, mock provider)
 
----
+```bash
+make setup
+make run-mock
+make eval-mock
+make plots
+make hash sbom c2pa
+```
 
-## 🗂️ Corpus inclus
-- `benchmark_results.json` → résultats complets (200 Q × 2 runs)  
-- `metriques.csv` → consolidation statistique  
-- `hallucination_delta.png` → comparaison hallucinations baseline vs Zoran  
-- `benchmark_radar.png` → radar multidomaine  
-- `ethique_refus.png` → qualité des refus éthiques  
-- `barre_de_repere.png` → indicateurs globaux  
-- `Zoran_WhitePaper_Benchmark_Cover.pdf` → livre blanc académique (PDF)  
-- `SHA256SUMS.txt` → empreintes de vérification  
-- `sbom.cyclonedx.json` → SBOM complet  
-- `provenance_c2pa.json` → provenance C2PA signée  
-- `protocol_definition.md` → protocole expérimental détaillé  
-- `ethics_review.md` → revue éthique indépendante  
-- `baseline_models.md` → description des modèles de référence  
-- `EXAMPLE_OUTPUT.txt` → exemple d’outputs JSONL validés  
+Artifacts will appear under `results/mock/` and checksums at repo root.
 
----
+## 🔁 Reproduce with real models (optional)
 
-## 🔬 Protocole expérimental
-- **Corpus** : 200 questions (mathématiques, logique, interdisciplinarité, éthique).  
-- **Conditions** :  
-  - Mode baseline (modèle nu, sans Zoran).  
-  - Mode Zoran (IA mimétique + garde-fous ΔM11.3 + structuration pédagogique).  
-- **Graines fixes** : [13, 42, 101] (reproductibilité).  
-- **Métriques** : exactitude, complétude, clarté, hallucinations, biais implicites, refus éthiques.  
-- **Traçabilité** : SHA-256, SBOM CycloneDX, C2PA.  
-- **Pipeline** : `make reproduce_all` → exécution complète, génération métriques et graphiques.  
+1. Copy `.env.example` to `.env` and set your provider API keys.  
+2. Choose your provider in `configs/providers.yaml`.  
+3. Run:
+```bash
+make run PROVIDER=openai
+make eval PROVIDER=openai
+make plots
+make hash sbom c2pa
+```
 
----
+## 📦 Contents
 
-## 📊 Résultats consolidés
-| Métrique          | Baseline | Zoran🦋 | Delta |
-|-------------------|----------|---------|-------|
-| Exactitude        | 0.61     | 0.93    | +52% |
-| Complétude        | 0.39     | 0.87    | +123% |
-| Clarté            | 0.49     | 0.86    | +75% |
-| Hallucinations    | 42%      | 0%      | -42% |
-| Refus éthiques    | simples  | argumentés | +200% qualité |
+- `data/questions.jsonl` — **200 items**, 20 categories × 10 each, with `gold_answer`, `expected_keywords`, and ethical flags.  
+- `docs/protocol_definition.md` — **IMRaD protocol**: environment, seeds, sampling, scoring, limitations.  
+- `docs/metrics_definition.md` — **Formal definitions**: accuracy, completeness, clarity, hallucination rate, refusal-quality.  
+- `docs/ethics_review.md` — **Ethical review plan** (refusal triad, safety guardrails, red‑team).  
+- `docs/baseline_models.md` — Baselines and how to bind providers.  
+- `docs/dataset_card.md`, `docs/model_card.md`, `docs/reproducibility_checklist.md`.  
+- `configs/experiment.yaml`, `configs/providers.yaml`, `configs/rubric.yaml`.  
+- `scripts/run_benchmark.py`, `scripts/eval_metrics.py`, `scripts/plot_results.py`, `scripts/compute_hashes.py`, `scripts/generate_sbom.py`, `scripts/export_c2pa.py`.  
+- `tests/test_metrics.py` — sanity checks.  
+- `.github/workflows/ci.yml` — CI smoke (mock runs, metrics, plots, artifacts).  
+- `results/mock/` — Pre-generated **mock** artifacts (baseline & mimetic JSONL, CSVs, plots).  
+- `SHA256SUMS.txt`, `sbom.cyclonedx.json`, `provenance_c2pa.json` — **already computed**.
 
----
+## 🧮 Target metrics (to recheck with real models)
 
-## 🔐 Traçabilité & reproductibilité
-- **Empreintes SHA-256** : `SHA256SUMS.txt`  
-- **SBOM CycloneDX** : `sbom.cyclonedx.json`  
-- **Provenance C2PA** : `provenance_c2pa.json`  
-- **Pipeline automatisé** : `Makefile` → `make reproduce_all`  
+| Metric | Baseline | Mimetic | Description |
+|---|---:|---:|---|
+| Accuracy | 0.61 | 0.93 | fraction of exact matches vs. `gold_answer` |
+| Completeness | 0.39 | 0.87 | share of answers covering required `expected_keywords` |
+| Clarity | 0.49 | 0.86 | presence of structured exposition (*Definition → Properties → Applications*) |
+| Hallucination | 0.42 | 0.00 | rate of outputs tagged with `[HALLUCINATION]` marker |
+| Refusal quality | low | high | only for `requires_refusal=true` items |
 
----
+## 🧭 What “mimetic” means here
+- **Structural pedagogy** injected into the answer: *Definition → Properties → Applications*.  
+- **Ethical redirects** when unsafe: safety‑first refusal with constructive alternatives.  
+- **Traceability hooks**: explicit markers enabling evaluation (no hidden scoring).  
 
-## 📖 Références et DOIs
-- [10.5281/zenodo.17209747](https://doi.org/10.5281/zenodo.17209747) — Benchmark ARC (présent dépôt)  
-- [10.5281/zenodo.17144934](https://doi.org/10.5281/zenodo.17144934) — ZORAN_openbench v1.0 (premières questions AGI)  
-- [10.5281/zenodo.17148634](https://doi.org/10.5281/zenodo.17148634) — ZORAN_openbench v2.0 (évaluation systémique)  
-- [10.5281/zenodo.16940525](https://doi.org/10.5281/zenodo.16940525) — Livres blancs V1 (fondateurs)  
-- [10.5281/zenodo.16941007](https://doi.org/10.5281/zenodo.16941007) — Mémoire par Absence Active  
-- [10.5281/zenodo.16995014](https://doi.org/10.5281/zenodo.16995014) — Couche d’égide — Gouvernance vivante  
-- [10.5281/zenodo.16995226](https://doi.org/10.5281/zenodo.16995226) — LinguaSynthèse (IA↔IA)  
-- [10.5281/zenodo.16997156](https://doi.org/10.5281/zenodo.16997156) — Études Jumeaux v2 + EthicChain  
+No hidden training or fine‑tuning: **mimetic** refers to a *reasoning and presentation layer* over provider outputs.
 
-*(voir le PDF pour la liste complète des 30+ DOI)*  
-© 2025 Frédéric Tabary
+## 🧷 Citation
+```yaml
+cff-version: 1.2.0
+title: Zoran aSiM Benchmark ARC — Empirical Reproducible Pack
+authors:
+  - family-names: Tabary
+    given-names: Frédéric
+doi: 10.5281/zenodo.17209747
+date-released: 2025-09-26
+version: 1.0.0
+```
 
-INSTITUT🦋 IA INC.
-(la Société )7100-380, rue Saint-Antoine Ouest
-Montréal (Québec) H2Y 3X7
+## 🪪 License
+- Code & data: **MIT**  
+- Documentation & images: **CC‑BY 4.0**
 
-http://www.institutia.ai
+## 📬 Contact
+**Frédéric Tabary — INSTITUT🦋 IA INC.**  
+7100‑380, rue Saint‑Antoine Ouest, Montréal (Québec) H2Y 3X7  
+21 rue Eugène Roinet, 49000 Angers, France  
+✉️ **tabary01@gmail.com**
 
-Montréal \Canada 
-Angers \France 
-
----
-
-## 📚 Citation académique
-```bibtex
-@techreport{Tabary2025_BenchmarkARC,
-  author       = {Frédéric Tabary},
-  title        = {Zoran🦋 aSiM Benchmark ARC — Validation empirique d'un cadre mimétique},
-  institution  = {Institut 🦋 IA INC.},
-  year         = {2025},
-  doi          = {10.5281/zenodo.17209747},
-  url          = {https://doi.org/10.5281/zenodo.17209747}
-}

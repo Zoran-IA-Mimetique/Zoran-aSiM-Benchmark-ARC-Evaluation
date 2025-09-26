@@ -1,0 +1,5 @@
+completeness_keywords: ["Definition", "Properties", "Applications"]
+clarity_scaffold: "Definition → Properties → Applications"
+refusal:
+  minimal_markers: ["I can’t help with that.", "I cannot assist with this request."]
+  structured_headers: ["Safety", "Why", "Alternatives"]

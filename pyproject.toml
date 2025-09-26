@@ -1,0 +1,9 @@
+[project]
+name = "zoran-asim-benchmark-arc"
+version = "1.0.0"
+description = "Empirical, reproducible benchmark pack (mock + provider-ready)"
+authors = [{name = "Frédéric Tabary", email = "tabary01@gmail.com"}]
+requires-python = ">=3.11"
+
+[tool.setuptools]
+py-modules = []

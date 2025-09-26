@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  runner:
+    build: .
+    environment:
+      - PROVIDER=mock
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -lc "make run-mock && make eval-mock && make plots && make hash sbom c2pa"
