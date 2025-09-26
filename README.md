@@ -6,6 +6,7 @@
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Stars](https://img.shields.io/github/stars/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation?style=social)
 ![Downloads](https://img.shields.io/badge/Zenodo-Downloads%20📥-blue)
+
 [![Contact](mailto:tabary01@gmail.com)](mailto:tabary01@gmail.com)
 
 
