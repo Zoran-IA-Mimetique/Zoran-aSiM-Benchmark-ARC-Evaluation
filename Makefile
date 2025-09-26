@@ -1,6 +1,6 @@
 all: reproduce_all
 
 reproduce_all:
-	@echo "Simulation de reproduction du benchmark Zoran🦋 aSiM"
-	@echo "Lots JSONL → metrics.csv → benchmark_results.json"
-	@sha256sum -c SHA256SUMS.txt
+	python run_benchmark.py --provider mock --output benchmark_results.json
+	python run_metrics.py --input benchmark_results.json --output metriques.csv
+	sha256sum benchmark_results.json metriques.csv > SHA256SUMS.txt

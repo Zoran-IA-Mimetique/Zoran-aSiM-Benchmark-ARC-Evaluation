@@ -1,28 +1,4 @@
-{
-  "questions_total": 200,
-  "reponses_total": 400,
-  "domains": [
-    "mathématiques",
-    "logique",
-    "éthique",
-    "interdisciplinaire"
-  ],
-  "metrics": {
-    "exactitude": {
-      "baseline": 0.61,
-      "zoran": 0.93
-    },
-    "completude": {
-      "baseline": 0.39,
-      "zoran": 0.87
-    },
-    "clarte": {
-      "baseline": 0.49,
-      "zoran": 0.86
-    },
-    "hallucinations": {
-      "baseline": 0.42,
-      "zoran": 0.0
-    }
-  }
-}
+[
+  {"id": "Q1", "baseline": "Réponse courte", "zoran": "Réponse détaillée avec contexte", "truth": "Réponse correcte"},
+  {"id": "Q2", "baseline": "Erreur", "zoran": "Réponse correcte et complète", "truth": "Réponse correcte"}
+]
