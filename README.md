@@ -1,4 +1,5 @@
 🦋 Zoran aSiM Benchmark ARC – Évaluation académique et empirique
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17209747.svg)](https://doi.org/10.5281/zenodo.17209747)
 ![Reproducibility](https://img.shields.io/badge/Reproducibility-SHA256%20%7C%20SBOM%20%7C%20C2PA-blue)
@@ -9,7 +10,21 @@
 
 
 
+# 🦋 Zoran aSiM Benchmark ARC Evaluation
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17209747.svg)](https://doi.org/10.5281/zenodo.17209747)
+![Reproducibility](https://img.shields.io/badge/Reproducibility-SHA256%20%7C%20SBOM%20%7C%20C2PA-blue)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Stars](https://img.shields.io/github/stars/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation?style=social)
+![Downloads](https://img.shields.io/badge/Zenodo-Downloads%20📥-blue)
+[![Contact](https://img.shields.io/badge/Email-tabary01%40gmail.com-blue)](mailto:tabary01@gmail.com)
+
+---
+
+## 📑 Description
+
+**Benchmark officiel de Zoran🦋 aSi
 
 
 ---
