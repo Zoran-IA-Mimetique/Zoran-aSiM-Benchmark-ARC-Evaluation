@@ -1,11 +1,12 @@
 cff-version: 1.2.0
-title: "Zoran🦋 aSiM Benchmark ARC – 200 Questions Interdisciplinaires"
+title: "Zoran🦋 aSiM Benchmark ARC — Validation empirique"
 authors:
   - family-names: "Tabary"
     given-names: "Frédéric"
-    affiliation: "Institut IA Lab / AIformpro / Zoran InstituteIA"
+    affiliation: "INSTITUT🦋 IA INC."
     email: "tabary01@gmail.com"
 date-released: 2025-09-26
-doi: 10.5281/zenodo.17209747
+version: "1.0.0"
+doi: "10.5281/zenodo.17209747"
+repository-code: "https://github.com/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation"
 license: MIT
-message: "If you use this benchmark, please cite it using the metadata above."

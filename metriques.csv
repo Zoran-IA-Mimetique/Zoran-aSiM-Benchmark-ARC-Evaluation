@@ -1,7 +1,2 @@
-Métrique,Baseline,Zoran,Delta
-Exactitude,0.61,0.93,+52%
-Complétude,0.39,0.87,+123%
-Clarté,0.49,0.86,+75%
-Hallucinations,42%,0%,-42%
-Biais,18%,0%,-18%
-Refus éthiques,100% simples,100% argumentés,+200% qualité
+metric,baseline,zoran,delta
+exactitude,0.61,0.93,0.32
