@@ -2,7 +2,7 @@
 DOI: 10.5281/zenodo.17209747 | Licence: MIT | Reproductibilité: 100% | Conformité: AI Act + ISO 42001
 
 Benchmark officiel sur 200 questions interdisciplinaires.
-Résultats: +52% exactitude, +123% complétude, 0% hallucinations.
+Résultats: +52% exactitude, +123% complétude, 
 
 ## 📂 Corpus inclus
 - benchmark_results.json
@@ -20,3 +20,6 @@ Résultats: +52% exactitude, +123% complétude, 0% hallucinations.
 ## 📖 Citation académique
 Frédéric Tabary (2025). *Zoran🦋 aSiM Benchmark ARC — Validation d'un cadre mimétique.*
 Zenodo. DOI: 10.5281/zenodo.17209747
+lien Hub depot Zoran Kernel 
+Code Python Zoran core
+https://github.com/Zoran-IA-Mimetique/Zoran-aSiM-Benchmark-ARC-Evaluation
