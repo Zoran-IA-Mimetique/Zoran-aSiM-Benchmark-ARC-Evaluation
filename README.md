@@ -18,5 +18,5 @@ Résultats: +52% exactitude, +123% complétude, 0% hallucinations.
 - Makefile
 
 ## 📖 Citation académique
-Frédéric Tabary (2025). *Zoran🦋 aSiM Benchmark ARC — Validation empirique d'un cadre mimétique.*
+Frédéric Tabary (2025). *Zoran🦋 aSiM Benchmark ARC — Validation d'un cadre mimétique.*
 Zenodo. DOI: 10.5281/zenodo.17209747
